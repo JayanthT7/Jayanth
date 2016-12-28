@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace prg2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int num01;
+            int num02;
+
+            Console.WriteLine("Type a number to be multipied: ");
+            num01=Convert.ToInt32 (Console.ReadLine());
+            Console.WriteLine("Type a another number to be multipied:  ");
+            num02=Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Multipied number is "+ num01 * num02);
+            Console.ReadLine();
+            try
+            {
+            Console.WriteLine("Enter a number to divide");
+            num01=Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter another number to divide");
+            num02=Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("The divided number is "+ num01 / num02);
+            Console.ReadLine();
+            Console.WriteLine("Airthmetic Exception");
+            }
+            catch(System.DivideByZeroException e)
+            {
+                Console.WriteLine("Denominator cannot be zero!!!!");
+                throw;
+            }
+        }
+    }
+}
